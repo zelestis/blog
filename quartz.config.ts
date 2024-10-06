@@ -12,9 +12,7 @@ const config: QuartzConfig = {
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
-    analytics: {
-      provider: "plausible",
-    },
+    analytics: { provider: 'google', tagId: 'G-9S6CF8ERY0' },
     locale: "en-US",
     baseUrl: "https://zelestis.github.io/blog/",
     ignorePatterns: ["private", "templates", ".obsidian"],
