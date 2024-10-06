@@ -4,7 +4,7 @@ description:
 permalink: 
 aliases: 
 tags: 
-draft: "true"
+draft: true
 ---
 
 Hello! 

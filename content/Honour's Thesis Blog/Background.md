@@ -4,7 +4,7 @@ description:
 permalink: honours_background
 aliases: 
 tags: 
-draft: "false"
+draft: false
 ---
 I'm doing my honour's thesis! The topic here is about Just-in-Time query compilation in Relational Database engines. Step one here is to collect information about the current databases that do this, how they function and whether they're actually good. This page is a quick summary about the options around and how they work.
 
