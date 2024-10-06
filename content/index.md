@@ -2,4 +2,4 @@
 title: Hello world!
 ---
 
-Hello! 
+Hello! This is a boring old page.
