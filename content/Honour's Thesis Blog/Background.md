@@ -1,5 +1,5 @@
 ---
-title: 0. Background
+title: Background
 description: 
 permalink: honours_background
 aliases: 
