@@ -14,7 +14,7 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: { provider: 'google', tagId: 'G-9S6CF8ERY0' },
     locale: "en-US",
-    baseUrl: "https://zelestis.github.io/blog/",
+    baseUrl: "zelestis.github.io/blog/",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     theme: {
