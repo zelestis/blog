@@ -24,54 +24,67 @@ TODOs left on this page:
 ### LLVM-backed
 #### Lingo Db
 [Website](https://www.lingo-db.com/) | [Code](https://github.com/lingo-db/lingo-db) | Research papers [one](https://www.vldb.org/pvldb/vol15/p2389-jungmair.pdf) [two](https://vldb.org/pvldb/vol14/p2483-bandle.pdf) | [Benchmarking Tools](https://github.com/lingo-db/lingo-db/tree/eee8c78847b2377ddc8b84974585182a7bb67700/resources/sql/tpch)
+
 Their main ideas seem to be about making sub operators (scan, materialize, scatter, gather, map, fold, and loop) first-class entites and they use MLIR to support their compiler. The impressive thing is that it's very few lines of code - only about 2.5K - and they manage to get their query compiler quite reasonably fast. This means it's a good starting point for understanding the topic of my thesis, since it's mostly about the JIT compiler. It supports enough SQL operations to run TPC-H benchmarks
 #### Impala
 https://dbdb.io/db/impala 
+
 This also uses LLVM, and it's quite old. The last stable release was only two years ago, so it might be quite an interesting, older sample of a JIT compiler.
 
 #### Apache Kudu
 https://dbdb.io/db/kudu
+
 Another interesting LLVM JIT one. I suspect the compiler is going to be very similar to Impala
 
 #### NoisePage
 https://dbdb.io/db/noisepage
+
 Seems to be archived on github, but the description seems worth mentioning. It compiles their programming language into bytecode and then those can be handled with LLVM.
 
 #### OpenMLDB
 https://dbdb.io/db/openmldb
+
 Yet another LLVM-able JIT compiler. Seems to be built for machine learning applications.
 
 #### SingleStore
 https://dbdb.io/db/singlestore
+
 Seems to be yet another LLVM powered query compiler. However, it has more steps before feeding it into LLVM
 
 #### Postgresql
 https://www.postgresql.org/docs/current/jit.html
+
 Seems they have some level of JIT support, but I'm not sure how deep it goes
 
 ### JVM-backed
 #### Derby
 * https://dbdb.io/db/derby
+
 > Derby parses the prepared statement using Javacc and generates the Java binary code directly. JIT complier is supported, so that after several executions, JIT compiler will compile it to native code for performance improvement.
 
 #### Neo4j
 https://dbdb.io/db/neo4j
+
 The world's leading graphs database. Seems worth checking out.
 
 #### OrientDB
 https://dbdb.io/db/orientdb
+
 Yet another database that's supported by the JVM compiler in its query optimizations
 
 #### PrestoDB
 https://dbdb.io/db/prestodb
+
 This one seems quite interesting. It started in 2013 at Facebook, and it uses JIT to optimize its queries.
 
 #### Apache Spark
 https://dbdb.io/db/spark-sql
+
 This one is very popular, so worth checking out. It uses the Scala compiler. It might be hard to squeeze it into a benchmarking tool though.
 
 #### Tajo
 https://dbdb.io/db/tajo
+
 Yet another JIT powered by the JVM, but it seems abandoned and it doesn't seem like it has much unique going on. It's a distributed data warehouse system
 
 -------------
@@ -83,6 +96,7 @@ As they say, the main goal of this database is to produce prototypes very quickl
 
 #### GreenPlum
 https://dbdb.io/db/greenplum
+
 Seems to be a data warehouse that uses Orca for the query optimiser
 > Greenplum utilizes query compilation for predicate evaluation, tuple deform and primitive type functions, etc. It doesn't compile the execution engine into a push-based model. As it is mentioned in the Query Execution section, the execution model is volcano pull style.
 
@@ -90,14 +104,17 @@ Seems to be a data warehouse that uses Orca for the query optimiser
 
 #### QuestDB
 https://dbdb.io/db/questdb
+
 This one seems quite interesting. It's a time series database though, so it might be hard to compare to the others. I think it uses a novel? JIT compiler so it could be neat
 
 #### RaptorDB
 https://dbdb.io/db/raptordb
+
 Abandoned, but it seems quite interesting. It's a key-value store for JSON documents and it uses the .NET runtime framework to optimise it's query compilation
 
 #### StarRocks
 https://dbdb.io/db/starrocks
+
 Seems quite interesting. Doesn't specify how it does the JIT compilation on this page.
 
 ## Proprietary
@@ -122,6 +139,7 @@ https://dbdb.io/db/pieclouddb
 
 ### Proteus
 https://proteusdb.com/
+
 Yet another LLVM-supported database query optimizer. It has some GPU optimizations in it, but it seems to have quite a lot of publications. Most seem to be more focused on the GPU side, but some of them have information about trying to get CPU-GPU parallelism in JIT compiled engines.
 
 
