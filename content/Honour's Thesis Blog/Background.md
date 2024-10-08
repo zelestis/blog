@@ -171,11 +171,64 @@ This one looks quite interesting. It has a fairly specific query compiler and ul
 
 
 ----
-## Similar literature reviews to look at
-Exploring Simple Architecture of Just-in-Time Compilation in Databases - https://link.springer.com/chapter/10.1007/978-981-97-7244-5_44
-An Empirical Analysis of Just-in-Time Compilation in Modern Databases - https://link.springer.com/chapter/10.1007/978-3-031-47843-7_16
+# Papers / news about JIT in database compilers
+## [Exploring Simple Architecture of Just-in-Time Compilation in Databases](https://link.springer.com/chapter/10.1007/978-981-97-7244-5_44)
+* This is written at the same university I'm at, and with the same supervisor. So. I should read this properly
+* Mentions there are two categories of JIT, Query Plan Execution (QPE) and Expression (EXP)
+* HyPer is a QPE example
+* PostgreSQL is a EXP example
+	* Notable JIT-based systems include PostgreSQL [12], HyPer [8], Umbra [14], ClickHouse [7], and Mutable [6], with HyPer being a representative pioneer.
+* They say HyPer is the representative pioneer of this idea, but it's very complicated, it's hard to test, and it isn't very extendable. They want to make a JIT-style system that counters these with low engineering effort, easy testing, and compatible with the ecosystem
+* They end up piggy-backing off LLVM. The rest is basically what you'd expect for this architecture - compile SQL statement into C++, feed C++ into LLVM, use LLVM's JIT compiler
+* It feels like the vast majority of their effort is in SQL -> C++, they write,
+	* > From SQL to C++. In this process, each query’s code is manually written according to the sequential flow of database operators. That is, each query undergoes a manual pass phase to generate C++ code, ensuring that the output results are consistent with the results produced by PostgreSQL
+	* My question is, shouldn't PostgreSQL already have code that does this?
+* They quote quite ambitious performance metrics that are significantly better than psql. They only go up to 1GB of data though, which I don't think is enough. I.e. their bigger query takes 1000 milliseconds
+* They quote some future work they'd be interested in. 
+	* Converting SQL -> code
+	* Using MLIR 
+	* Expand the number of SQL operators
+	* Support better parallelisation + vectorization
+	* Integrate it into existing databases\
+	* Make a query optimizer that supports JIT. Current ones support AOT
+	* Caching JIT code
+
+I am curious whether this is vanilla PostgreSQL, or if it is actually JIT-enabled
+
+
+## [An Empirical Analysis of Just-in-Time Compilation in Modern Databases](https://link.springer.com/chapter/10.1007/978-3-031-47843-7_16)
+* Again, this one is also published by my university
+* > LLVM serves as the primary JIT architecture, which was implemented in PostgreSQL since version 11
+	* This time, it seems they know about JIT in PostgreSQL. Maybe I didn't read the last paper properly then
+* Their main goal in the abstract is to compare PostgreSQL's JIT to Mutable's JIT
+* Side note: What is WASM? We can compile a number of languages into Wasm, including LLVM IR, and the main purpose is that it's useable by web technologies. Seems very weird to do a comparison with Wasm to me though, shouldn't the pure LLVM destroy it?
+* Sort of weird, this article groups JITs into LLVM and WASM approaches
+* They also list Hyper, but spell it as Hyper, not HyPer. I assume that's the same thing. They pick PostgreSQL as a representative of the idea instead of HyPer though
+* Yeah, so I think the wasm side goes LLVM -> WASM IR -> Jit by V8 and binaryen
+* They have nice diagrams for the JIT architecture of PostgreSQL and Mutable
+* It seems Mutable's advantage is it feeds their entire query execution plan, while PostgreSQL only does expressions
+* Mutable completely destroys postgresql. Also, they have much larger databases. Postgres's JIT doesn't actually seem to make much of an impact on postgres itself, but then they also seem to have a graph that says the benefits first happen at large queries. They never test for 10GB queries between Mutable and PostgreSQL
+* Discussions and future work
+	* Integrate WASM into PostgreSQL
+	* Expand operators into Mutable
+	* Harnessing novel hardware
+	* Expanded practical evaluation - just compare even more databases
+
+I kind of disagree that WASM is the thing that's making Mutable fast. I'm not sure how good WASM actually is, it's just when I think of the best JIT around I imagine the JVM because it's the oldest and most researched. Really the thing that's making it fast is that it has the whole query plan, and not just the expressions. I think their other paper basically proves this, because it also uses LLVM but gets significantly better results by passing in the entire query plan.
+
+
+It is sort of interesting that they use PostgreSQL as a representative of HyPer, when HyPer is actually a QPE based compiler while PostgreSQL is a EXP one. I guess I should add a TODO to categorize all the above databases into 1. Compiler used, 2. QPE or EXP. I guess if I have a set of open source databases that are {LLVM, JVM, WASM} x {QPE, EXP} then I'd be fairly happy.
+
+-----
+# To read through
 Just-In-Time data structures https://www.cidrdb.org/cidr2015/Papers/CIDR15_Paper9.pdf
+
 Towards Just-in-time Compilation of SQL Queries with OMR JitBuilder - https://www.cs.unb.ca/~sray/papers/CASCON2021_preprint.pdf
+
 Just-in-time Compilation in Vectorized Query Execution - https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=a888aff682f443209d0ddf4785cd5b76c2d8d0cf
+
 Compiled Query Execution Engine using JVM - https://ieeexplore.ieee.org/abstract/document/1617391
+
 Hackerrank article on JIT in postgres - https://news.ycombinator.com/item?id=26211895
+
+Also this one. It seems when postgres introduced JIT, it caused significant problems - https://www.reddit.com/r/PostgreSQL/comments/qtsif5/cascade_of_doom_jit_and_how_a_postgres_update_led/
