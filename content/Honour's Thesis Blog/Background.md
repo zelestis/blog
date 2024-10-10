@@ -251,12 +251,16 @@ JIT on the actual `SELECT` operation
 * Their result is a small ish speedup, but it's a consistent improvement.
 It's between $13\%$ and $1.5\%$ sort of bounds
 
+## [Just-in-time Compilation in Vectorized Query Execution](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=a888aff682f443209d0ddf4785cd5b76c2d8d0cf)
+* This is a very long article.
+* It has a nice explanation of what the volcano model is
+* There's a short list of other databases that try to do JIT, but not many - HIQUE, Hyper, JAMDB, Daytona 
+and ParAccel. TODO: Add these to the list of databases above
 
 -----
 # To read through
 
 
-Just-in-time Compilation in Vectorized Query Execution - https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=a888aff682f443209d0ddf4785cd5b76c2d8d0cf
 
 Compiled Query Execution Engine using JVM - https://ieeexplore.ieee.org/abstract/document/1617391
 
