@@ -189,7 +189,7 @@ This one looks quite interesting. It has a fairly specific query compiler and ul
 	* Using MLIR 
 	* Expand the number of SQL operators
 	* Support better parallelisation + vectorization
-	* Integrate it into existing databases\
+	* Integrate it into existing databases
 	* Make a query optimizer that supports JIT. Current ones support AOT
 	* Caching JIT code
 
@@ -219,11 +219,42 @@ I kind of disagree that WASM is the thing that's making Mutable fast. I'm not su
 
 It is sort of interesting that they use PostgreSQL as a representative of HyPer, when HyPer is actually a QPE based compiler while PostgreSQL is a EXP one. I guess I should add a TODO to categorize all the above databases into 1. Compiler used, 2. QPE or EXP. I guess if I have a set of open source databases that are {LLVM, JVM, WASM} x {QPE, EXP} then I'd be fairly happy.
 
+## [Just-In-Time data structures](https://www.cidrdb.org/cidr2015/Papers/CIDR15_Paper9.pdf)
+* Seems this one has to do with improvin indexing methods with
+a JIT approach.
+* Currently when we make an index on something, it's an all-or-nothing.
+If you add an index, it maintains the B-tree or other data structure
+which has an overhead cost. This might not even be an optimal tree
+if they're doing only a subset of queries as well. We want a JITD, 
+which changes depending on the current load. If there's lots of writes,
+writes should be fast
+* So this seems fairly different to compilers, but it is an interesting
+idea. It isn't really query plan optimisation either, so I'm going to
+stop reading this one.
+
+## [Towards Just-in-time Compilation of SQL Queries with OMR JitBuilder](https://www.cs.unb.ca/~sray/papers/CASCON2021_preprint.pdf)
+* This is probably the most relevant article I've seen to the idea of attaching MLIR to QPE
+* > The goal of our work is to generate efficient machine code
+for scan, filter, join and group-by operations for a given SQL 
+expression by Just-in-time (JIT) compilation using the OMR JitBuilder
+compiler framework
+* OMR JitBuilder sounds similar to MLIR, except it goes straight to JIT
+instead of needing to be put through LLVM. So less effort
+* They attach this to PostgreSQL 12.5! This seems like an actually interesting
+article then!
+* I should read into Volcano-style query executions...
+* They found a functoni called `ExecInterpExpr` which is very expensive.
+I assume it's "execute interpreted expression"
+* The key thing is that JIT in PostgreSQL compiles only expressions,
+e.g. `SELECT x + 5 from table_a`, does JIT on `x + 5`. Theirs does
+JIT on the actual `SELECT` operation
+* Their result is a small ish speedup, but it's a consistent improvement.
+It's between $13\%$ and $1.5\%$ sort of bounds
+
+
 -----
 # To read through
-Just-In-Time data structures https://www.cidrdb.org/cidr2015/Papers/CIDR15_Paper9.pdf
 
-Towards Just-in-time Compilation of SQL Queries with OMR JitBuilder - https://www.cs.unb.ca/~sray/papers/CASCON2021_preprint.pdf
 
 Just-in-time Compilation in Vectorized Query Execution - https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=a888aff682f443209d0ddf4785cd5b76c2d8d0cf
 
