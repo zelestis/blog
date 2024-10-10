@@ -39,7 +39,7 @@ I think it's important to define what I actually need before I start anything. O
 If I start listing more things than this it starts getting way too much. My other ideas are leaderboards, comments + solutions, and code template support. Maybe templates are quite doable though?
 
 ## Architecture
-![[Pasted image 20241010151256.png]]
+![[Pasted image 20241010151641.png]]
 ![[architecture.drawio]]
 1. Backend server - PureScript
 2. Frontend server - PureScript
