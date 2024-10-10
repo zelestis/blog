@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "acc7223f46229074",
+        "id": "01b5be408bad6c45",
         "type": "tabs",
         "children": [
           {
-            "id": "59b7793567d74fc0",
+            "id": "7dd699f75f926665",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -146,14 +146,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "59b7793567d74fc0",
+  "active": "7dd699f75f926665",
   "lastOpenFiles": [
+    "Projects/CSES Online.md",
     "Pasted image 20241010151256.png",
     "architecture.drawio",
     "Honour's Thesis Blog/Background.md",
     "Honour's Thesis Blog/Background.md~",
     "Honour's Thesis Blog/4913",
-    "Projects/CSES Online.md",
     "Pasted image 20241007123809.png"
   ]
 }

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Honour's Thesis Blog/Background.md",
+                "file": "Projects/CSES Online.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Honour's Thesis Blog/Background.md",
+                "file": "Projects/CSES Online.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Honour's Thesis Blog/Background.md",
+                "file": "Projects/CSES Online.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Honour's Thesis Blog/Background.md"
+                "file": "Projects/CSES Online.md"
               }
             }
           }
@@ -146,12 +146,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0dce8d2280f79685",
+  "active": "59b7793567d74fc0",
   "lastOpenFiles": [
+    "Pasted image 20241010151256.png",
+    "architecture.drawio",
+    "Honour's Thesis Blog/Background.md",
     "Honour's Thesis Blog/Background.md~",
     "Honour's Thesis Blog/4913",
     "Projects/CSES Online.md",
-    "architecture.drawio",
     "Pasted image 20241007123809.png"
   ]
 }
