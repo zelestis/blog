@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projects/CSES Online.md",
+                "file": "Honour's Thesis Blog/Background.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Projects/CSES Online.md",
+                "file": "Honour's Thesis Blog/Background.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Projects/CSES Online.md",
+                "file": "Honour's Thesis Blog/Background.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Projects/CSES Online.md"
+                "file": "Honour's Thesis Blog/Background.md"
               }
             }
           }
@@ -147,16 +147,17 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "06e3f1b5bf34fc20",
+  "active": "b80ee455c9e61b91",
   "lastOpenFiles": [
+    "benchmark_output.txt",
+    "Honour's Thesis Blog/Benchmarking.md",
+    "Projects/CSES Online.md",
     "architecture.drawio",
     "Pasted image 20241010151641.png",
     "Honour's Thesis Blog/Background.md",
-    "Projects/CSES Online.md",
     "Projects",
     "Untitled.md",
     "index.md",
-    "Honour's Thesis Blog/Benchmarking.md",
     "templates/template.md",
     "Honour's Thesis Blog",
     "Fundamental Computer Science/Untitled.md",
@@ -167,7 +168,6 @@
     "Fundamental Computer Science",
     "example.md",
     "templates/template.md~",
-    "templates/4913",
-    "templates"
+    "templates/4913"
   ]
 }

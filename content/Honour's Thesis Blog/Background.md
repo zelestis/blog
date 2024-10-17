@@ -25,6 +25,9 @@ TODOs left on this page:
 #### Lingo Db
 [Website](https://www.lingo-db.com/) | [Code](https://github.com/lingo-db/lingo-db) | Research papers [one](https://www.vldb.org/pvldb/vol15/p2389-jungmair.pdf) [two](https://vldb.org/pvldb/vol14/p2483-bandle.pdf) | [Benchmarking Tools](https://github.com/lingo-db/lingo-db/tree/eee8c78847b2377ddc8b84974585182a7bb67700/resources/sql/tpch)
 
+
+![[benchmark_output.txt]]
+
 Their main ideas seem to be about making sub operators (scan, materialize, scatter, gather, map, fold, and loop) first-class entites and they use MLIR to support their compiler. The impressive thing is that it's very few lines of code - only about 2.5K - and they manage to get their query compiler quite reasonably fast. This means it's a good starting point for understanding the topic of my thesis, since it's mostly about the JIT compiler. It supports enough SQL operations to run TPC-H benchmarks
 #### Impala
 https://dbdb.io/db/impala 
