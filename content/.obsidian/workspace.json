@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Honour's Thesis Blog/Background.md",
+                "file": "templates/template.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Honour's Thesis Blog/Background.md",
+                "file": "templates/template.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Honour's Thesis Blog/Background.md",
+                "file": "templates/template.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Honour's Thesis Blog/Background.md"
+                "file": "templates/template.md"
               }
             }
           }
@@ -147,18 +147,21 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "b80ee455c9e61b91",
+  "active": "06e3f1b5bf34fc20",
   "lastOpenFiles": [
+    "index.md~",
+    "4913",
+    "index.md",
+    "Untitled.md",
+    "templates/template.md",
+    "Hello.md",
+    "Honour's Thesis Blog/Background.md",
     "benchmark_output.txt",
     "Honour's Thesis Blog/Benchmarking.md",
     "Projects/CSES Online.md",
     "architecture.drawio",
     "Pasted image 20241010151641.png",
-    "Honour's Thesis Blog/Background.md",
     "Projects",
-    "Untitled.md",
-    "index.md",
-    "templates/template.md",
     "Honour's Thesis Blog",
     "Fundamental Computer Science/Untitled.md",
     "Competitive Programming",
@@ -166,8 +169,6 @@
     "Fundamental Computer Science/Compilers",
     "Fundamental Computer Science/Databasing",
     "Fundamental Computer Science",
-    "example.md",
-    "templates/template.md~",
-    "templates/4913"
+    "example.md"
   ]
 }
