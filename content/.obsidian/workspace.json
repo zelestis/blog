@@ -1,14 +1,14 @@
 {
   "main": {
-    "id": "009fd4aaa3de2cdd",
+    "id": "ad8532b0bdd0366e",
     "type": "split",
     "children": [
       {
-        "id": "01b5be408bad6c45",
+        "id": "5482c962ea83ab1a",
         "type": "tabs",
         "children": [
           {
-            "id": "7dd699f75f926665",
+            "id": "b80ee455c9e61b91",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -25,15 +25,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "68e090c87c2b9621",
+    "id": "87d18b2137b885bb",
     "type": "split",
     "children": [
       {
-        "id": "d047152c760cb090",
+        "id": "98561f85b62c59af",
         "type": "tabs",
         "children": [
           {
-            "id": "0dce8d2280f79685",
+            "id": "06e3f1b5bf34fc20",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -43,7 +43,7 @@
             }
           },
           {
-            "id": "24524d34b792d23c",
+            "id": "92d8e37947e7c1b7",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -58,7 +58,7 @@
             }
           },
           {
-            "id": "0823efc70e50dfc9",
+            "id": "b32f8ef36ec09e5e",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -72,15 +72,15 @@
     "width": 300
   },
   "right": {
-    "id": "86f64375f9c4064e",
+    "id": "37c4afc547be5eaf",
     "type": "split",
     "children": [
       {
-        "id": "9ce75aff4592ab9d",
+        "id": "d967f4777abc1018",
         "type": "tabs",
         "children": [
           {
-            "id": "397e28be8348fd32",
+            "id": "881499d5ae346ac9",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -97,7 +97,7 @@
             }
           },
           {
-            "id": "ef498e2d825234c3",
+            "id": "f76e89ce6a1b4592",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -109,7 +109,7 @@
             }
           },
           {
-            "id": "18c31b6fbcbe9e8d",
+            "id": "5422a7516bf5ab59",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -120,7 +120,7 @@
             }
           },
           {
-            "id": "99a006297441f90f",
+            "id": "4630dbeee0adad2b",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -143,18 +143,31 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "templater-obsidian:Templater": false
     }
   },
-  "active": "7dd699f75f926665",
+  "active": "06e3f1b5bf34fc20",
   "lastOpenFiles": [
     "architecture.drawio",
     "Pasted image 20241010151641.png",
-    "Projects/CSES Online.md",
-    "Pasted image 20241010151256.png",
     "Honour's Thesis Blog/Background.md",
-    "Honour's Thesis Blog/Background.md~",
-    "Honour's Thesis Blog/4913",
-    "Pasted image 20241007123809.png"
+    "Projects/CSES Online.md",
+    "Projects",
+    "Untitled.md",
+    "index.md",
+    "Honour's Thesis Blog/Benchmarking.md",
+    "templates/template.md",
+    "Honour's Thesis Blog",
+    "Fundamental Computer Science/Untitled.md",
+    "Competitive Programming",
+    "Fundamental Computer Science/Networks",
+    "Fundamental Computer Science/Compilers",
+    "Fundamental Computer Science/Databasing",
+    "Fundamental Computer Science",
+    "example.md",
+    "templates/template.md~",
+    "templates/4913",
+    "templates"
   ]
 }
