@@ -11,11 +11,6 @@ I'm doing my honour's thesis! The topic here is about Just-in-Time query compila
 
 Most of the databases are from [dbdb io](https://dbdb.io/browse?query-compilation=jit-compilation)
 
-TODOs left on this page:
-* I need to pick out a handful, ideally the bleeding edge in their area for the type of query compiler/optimizer which are viable to actually benchmark
-* I need to finish summarizing a handful of the relevant databases. Quite a lot of the databases are simply a clone of another one, but a different use case. Really when there's ten things using LLVM, only one of them is worth investigating as it's a difference in the part I care about
-* I need to read through the literature reviews at the bottom
-
 
 -----------
 # Relevant databases
