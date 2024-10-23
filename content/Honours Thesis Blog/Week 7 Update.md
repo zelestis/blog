@@ -4,7 +4,7 @@ description:
 permalink: week_7_update
 aliases: 
 tags: 
-draft: true
+draft: false
 ---
 
 * I've mostly been spending my spare time deep in a TikTok job application - I reached a very informal verbal offer! This also means more of my spare time will be dedicated to this thesis
